@@ -9,4 +9,4 @@ author: "Zebulun Arendsee"
 maintainer: "zbwrnz@gmail.com"
 github: https://github.com/morloc-lib/optimization
 bug-reports: https://github.com/morloc-lib/optimization
-gcc-flags: "-Wall -lm -lgs -lgslcblas"
+gcc-flags: "-Wall -lm -lgsl -lgslcblas"

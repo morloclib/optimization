@@ -1,3 +1,6 @@
+#ifndef __OPTIMIZATION_H__
+#define __OPTIMIZATION_H__
+
 #include <stdio.h>
 #include <gsl/gsl_errno.h>
 #include <gsl/gsl_math.h>
@@ -53,3 +56,5 @@ double optimize1D (double (*f)(double), double a, double b, int max_iter){
     while (status == GSL_CONTINUE && iter < max_iter);
     return m;
 }
+
+#endif

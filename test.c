@@ -1,4 +1,4 @@
-#include "optimization.h"
+#include "optimization.hpp"
 
 double fn1(double x){
     return cos(x) + 1;

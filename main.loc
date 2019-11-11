@@ -2,7 +2,7 @@ module optimization {
 
 import cppbase
 
-source Cpp from "optimization.h" ("optimize1D")
+source Cpp from "optimization.hpp" ("optimize1D")
 
 export optimize1D
 export optimize1D_step
