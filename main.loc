@@ -1,0 +1,22 @@
+module optimization {
+
+import cppbase
+
+source Cpp from "optimization.c" ("optimize1D")
+
+export optimize1D
+export optimize1D_step
+
+optimize1D
+    :: f:(Num -> Num)
+    -> lbnd:Num
+    -> rbnd:Num
+    -> max_iterations:Int
+    -> x:Num where {
+        lbnd <= rbnd;
+        x <= rbnd;
+        x >= lbnd;
+        max_iterations > 0;
+    };
+
+}
