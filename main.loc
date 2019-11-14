@@ -5,18 +5,18 @@ import cppbase
 source Cpp from "optimization.hpp" ("optimize1D")
 
 export optimize1D
-export optimize1D_step
 
 optimize1D
     :: f:(Num -> Num)
     -> lbnd:Num
     -> rbnd:Num
-    -> max_iterations:Int
-    -> x:Num where {
+    -> max_iterations:Num -- I need to add type handling for defining
+    -> x:Num where {      -- general types, this would allow Int
         lbnd <= rbnd;
         x <= rbnd;
         x >= lbnd;
         max_iterations > 0;
     };
+optimize1D Cpp :: (double -> double) -> double -> double -> size_t -> double;
 
-}
+};
