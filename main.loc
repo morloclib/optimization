@@ -10,13 +10,11 @@ optimize1D
     :: f:(Num -> Num)
     -> lbnd:Num
     -> rbnd:Num
-    -> max_iterations:Num -- I need to add type handling for defining
-    -> x:Num where {      -- general types, this would allow Int
+    -> x:Num where {
         lbnd <= rbnd;
         x <= rbnd;
         x >= lbnd;
-        max_iterations > 0;
     };
-optimize1D Cpp :: (double -> double) -> double -> double -> size_t -> double;
+optimize1D Cpp :: (double -> double) -> double -> double -> double;
 
 };
